@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.pth.bak
+
+# Vivado
+*.jou
+*.log
+*.pb
+*.wdb
+*.str
+xsim.dir/
+.vivado/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large outputs (regenerate with scripts)
+*.vcd
+*.wlf
