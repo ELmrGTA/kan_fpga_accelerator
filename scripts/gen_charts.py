@@ -176,8 +176,7 @@ def plot_resources():
     # 背景（总量）
     ax.barh(y, [100]*4, 0.5, color='#E0E0E0', label='剩余容量')
     # 已用
-    colors = ['#ED7D31', '#5B9BD5', '#70AD47', '#FFC000']
-    bars = ax.barh(y, util, 0.5, color=colors, label='已使用', alpha=0.9)
+    bars = ax.barh(y, util, 0.5, color='#ED7D31', label='已使用', alpha=0.9)
 
     # 数值标注
     for i, (bar, u, us, tot) in enumerate(zip(bars, util, used, total)):
@@ -193,7 +192,7 @@ def plot_resources():
     ax.axvline(x=10, color='red', linestyle='--', alpha=0.5, linewidth=1)
     ax.grid(axis='x', linestyle='--', alpha=0.4)
 
-    used_patch = mpatches.Patch(color='#ED7D31', label='已使用（各资源颜色不同）')
+    used_patch = mpatches.Patch(color='#ED7D31', label='已使用')
     free_patch = mpatches.Patch(color='#E0E0E0', label='剩余容量')
     ax.legend(handles=[used_patch, free_patch], loc='lower right', fontsize=9)
 
